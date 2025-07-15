@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratos Coreanos | Culinária Coreana</title>
+  <link rel="stylesheet" href="pagina2.css">
+</head>
+<body>
+  <div class="top-bar">
+    <button onclick="window.location.href='../login/login.html'" class="login-button">Login</button>
+    <div id="usuario-logado" style="display: none; margin-top: 5px; font-size: 14px; color: #333;"></div>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>Cardápio</h1>
+      <h2>Descubra os sabores autênticos da Coreia</h2>
+    </header>
+
+    <section id="pratos">
+      <!-- Os pratos serão inseridos via JavaScript -->
+    </section>
+
+     <footer>
+      <button id="voltar-inicial" onclick="window.location.href='../pagina1/pagina1.html/'">
+        Voltar para a Página Inicial
+      </button>
+      <button onclick="verCarrinho()">Ver Carrinho</button>
+      
+      <button onclick="irParaPagina3()">Ir para a Página 3</button>
+    </footer>
+  </div>
+
+  <!-- Modal do Carrinho -->
+  <div id="modal-carrinho" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="fecharCarrinho()">&times;</span>
+      <h2>Seu Carrinho</h2>
+      <div id="itens-modal-carrinho"></div>
+      <p id="total-modal-carrinho">Total: R$ 0,00</p>
+      <div class="botoes-carrinho">
+        <button onclick="fecharCarrinho()">Voltar</button>
+        <button onclick="continuarCompra()">Continuar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="pagina2.js"></script>
+  
+</body>
+</html>

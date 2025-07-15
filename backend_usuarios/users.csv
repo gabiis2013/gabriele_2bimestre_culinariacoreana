@@ -1,0 +1,6 @@
+username,email,tipo
+
+
+teste_cliente,teste@cliente.com,cliente
+admin,admin@adm.com,gerente
+gerente_teste,gerente@adm.com,gerente

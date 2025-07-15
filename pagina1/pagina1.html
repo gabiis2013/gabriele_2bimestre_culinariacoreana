@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página 1 - Escolha o Tipo de Prato</title>
+  <link rel="stylesheet" href="pagina1.css">
+</head>
+<body>
+  <div class="top-bar">
+    <button onclick="window.location.href='../login/login.html'" class="login-button">Login</button>
+    <div id="usuario-logado" style="display: none; margin-top: 5px; font-size: 14px; color: #333;"></div>
+  </div>
+
+  <h1>Escolha o Tipo de Prato Coreano</h1>
+
+  <button onclick="mostrarApimentados()">Apimentados</button>
+  <button onclick="mostrarSemPimenta()">Não Apimentados</button>
+
+  <p id="resultado"></p>
+
+  <!-- Botão que aparece após a escolha -->
+  <button id="botao-escolher" onclick="ESCOLHER()" style="display: none;">Ir para os pratos</button>
+
+  <script src="pagina1.js"></script>
+</body>
+</html>

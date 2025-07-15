@@ -1,0 +1,134 @@
+/* Reset básico */
+* {
+  margin: 0; /* Remove margens padrão de todos os elementos */
+  padding: 0; /* Remove preenchimento padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho total dos elementos */
+}
+
+body {
+  font-family: 'Segoe UI', 'Noto Sans KR', sans-serif; /* Define a fonte principal com fallback */
+  background: linear-gradient(135deg, #ffb347, #ff704d); /* Aplica um degradê em tons alaranjados */
+  color: #fff; /* Cor do texto padrão: branco */
+  line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+  text-align: center; /* Centraliza o texto */
+  height: 100vh; /* Altura da tela inteira */
+  display: flex; /* Define o body como flex container */
+  flex-direction: column; /* Direção da flexbox: coluna (vertical) */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  position: relative; /* Define posição relativa para elementos posicionados dentro */
+}
+
+/* Título */
+h1 {
+  font-size: 3rem; /* Tamanho grande para o título */
+  color: #fff8e1; /* Cor creme suave */
+  margin-bottom: 30px; /* Espaço abaixo do título */
+  z-index: 1; /* Garante que o título fique acima de outros elementos */
+  text-shadow: 2px 2px 4px #000; /* Sombra no texto para melhorar contraste */
+}
+
+/* Botões principais */
+button {
+  background-color: #e63946; /* Vermelho intenso (inspirado em kimchi) */
+  color: #fff; /* Texto branco */
+  border: none; /* Remove borda padrão */
+  padding: 18px 36px; /* Espaçamento interno dos botões */
+  font-size: 1.5rem; /* Tamanho da fonte do botão */
+  margin: 20px; /* Espaçamento externo entre botões */
+  border-radius: 12px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor tipo "mãozinha" ao passar por cima */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animações suaves ao passar o mouse */
+  width: 250px; /* Largura fixa para os botões */
+  z-index: 1; /* Camada acima do fundo */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para dar profundidade */
+}
+
+button:hover {
+  background-color: #d62828; /* Cor um pouco mais escura ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente o botão ao passar o mouse */
+}
+
+button:disabled {
+  background-color: #aaa; /* Cinza para botões desativados */
+  cursor: not-allowed; /* Cursor de não permitido */
+}
+
+/* Mensagem de resultado */
+#resultado {
+  font-size: 1.8rem; /* Tamanho grande para destaque */
+  color: #fff; /* Texto branco */
+  margin: 20px 0; /* Espaço vertical */
+  font-weight: bold; /* Texto em negrito */
+  z-index: 1; /* Garante visibilidade acima de outros elementos */
+  text-shadow: 1px 1px 2px #000; /* Sombra suave para contraste */
+}
+
+/* Botão "Ir para os pratos" */
+#botao-escolher {
+  background-color: #457b9d; /* Azul elegante */
+  color: #fff; /* Texto branco */
+  padding: 18px 36px; /* Espaçamento interno */
+  font-size: 1.5rem; /* Tamanho da fonte */
+  border-radius: 12px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de clique */
+  border: none; /* Sem borda */
+  display: none; /* Oculto por padrão */
+  margin-top: 20px; /* Espaço superior */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animação suave */
+  width: 250px; /* Largura padrão do botão */
+  z-index: 1; /* Sobre outros elementos */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para profundidade */
+}
+
+#botao-escolher:hover {
+  background-color: #355070; /* Azul mais escuro ao passar o mouse */
+  transform: scale(1.1); /* Efeito de ampliação */
+}
+
+/* Rodapé */
+footer {
+  margin-top: 30px; /* Espaço acima do rodapé */
+  font-size: 1rem; /* Tamanho pequeno para o texto */
+  color: #ffe5b4; /* Cor suave de texto (bege claro) */
+  z-index: 1; /* Visibilidade acima do fundo */
+}
+
+footer a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: #fff8e1; /* Cor clara dos links */
+}
+
+footer a:hover {
+  color: #ffcf8b; /* Cor dos links ao passar o mouse */
+}
+
+
+/* Estilos para a barra superior e botão de login */
+.top-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 100;
+}
+
+.login-button {
+  background-color: #4CAF50; /* Um verde agradável */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: auto; /* Remover largura fixa */
+  box-shadow: none; /* Remover sombra padrão */
+}
+
+.login-button:hover {
+  background-color: #45a049;
+  transform: none; /* Remover transformação de escala */
+}
+
+

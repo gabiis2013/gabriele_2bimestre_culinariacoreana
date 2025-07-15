@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagamento | Comida Coreana</title>
+  <link rel="stylesheet" href="pagina3.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div id="usuario-logado" style="display: none; margin-top: 5px; font-size: 14px; color: #333;"></div>
+  </div>
+
+  <div class="container">
+    
+    <header>
+      <h1>Finalizar Pedido</h1>
+      <p>Hora de saborear a culinária coreana!</p>
+    </header>
+
+    <main>
+      
+      <section class="resumo-pedido">
+        <h2>Resumo do Pedido</h2>
+        <div id="itens-carrinho"></div>
+        <p id="resumoPagamento">Total: R$ 0,00</p>
+      </section>
+
+      <section class="acoes">
+        <button id="gerarPix">Gerar QR Code Pix</button>
+        <button id="finalizar">Finalizar Compra</n>
+        <button id="editarPedido">Editar Pedido</button>
+        <button id="cancelarPedido">Cancelar Pedido</button>
+      </section>
+
+      <section id="qrcode-area" class="qrcode-area" style="display: none;">
+        <h2>Escaneie o QR Code para pagar com PIX</h2>
+        <div id="qrcode"></div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Comida Coreana</p>
+    </footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <script src="pagina3.js"></script>
+
+</body>
+</html>
+
+

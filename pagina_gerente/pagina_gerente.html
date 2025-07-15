@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página do Gerente - Culinária Coreana</title>
+  <link rel="stylesheet" href="../login/login.css"> <!-- Reutilizando o CSS de login para um estilo básico -->
+  <style>
+    .manager-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .manager-container h1 {
+      color: #333;
+    }
+    .manager-options button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .manager-options button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="manager-container">
+    <h1>Bem-vindo, Gerente!</h1>
+    <p>O que você gostaria de fazer?</p>
+    
+    <div class="manager-options" id="initial-options">
+      <button onclick="entrarComoCliente()">Entrar como cliente</button>
+      <button onclick="mostrarOpcoesGerente()">Entrar como gerente</button>
+    </div>
+
+    <div class="manager-options" id="manager-crud-options" style="display: none;">
+      <button onclick="gerenciarProdutos()">Gerenciar produto</button>
+      <button onclick="gerenciarUsuarios()">Gerenciar usuários</button>
+    </div>
+  </div>
+
+  <script>
+    function entrarComoCliente() {
+      window.location.href = "../pagina2/pagina2.html";
+    }
+
+    function mostrarOpcoesGerente() {
+      document.getElementById('initial-options').style.display = 'none';
+      document.getElementById('manager-crud-options').style.display = 'block';
+    }
+
+    function gerenciarProdutos() {
+      // Redirecionar para a página de gerenciamento de produtos
+      window.location.href = "gerenciar_produtos.html"; 
+    }
+
+    function gerenciarUsuarios() {
+      // Redirecionar para a página de gerenciamento de usuários
+      window.location.href = "gerenciar_usuarios.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("usuarioLogado");
+      localStorage.removeItem("nomeUsuario");
+      localStorage.removeItem("emailUsuario");
+      localStorage.removeItem("userType");
+      alert("Você foi desconectado.");
+      window.location.href = "../login/login.html";
+    }
+  </script>
+</body>
+</html>
+
+
